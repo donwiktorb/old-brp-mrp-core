@@ -2,4 +2,4 @@
 
 
 
-Core is inside resources/**/dwb_core
+Core is inside resources/dwb_core
