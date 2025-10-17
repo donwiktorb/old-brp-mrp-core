@@ -1,0 +1,4 @@
+[submodule "resources/[scripts]/[fivem]/screenshot-basic"]
+	path = resources/[scripts]/[fivem]/screenshot-basic
+	url = https://github.com/citizenfx/screenshot-basic.git
+	branch = master

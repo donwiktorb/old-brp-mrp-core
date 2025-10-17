@@ -1,0 +1,32 @@
+Thread:Create(function()
+  if true then
+    return
+  end
+  while true do
+    Wait(0)
+    DrawMarker(
+      9,
+      DWB.PlayerData.Coords,
+      0.0,
+      0.0,
+      0.0,
+      90.0,
+      0.0,
+      0.0,
+      10.0,
+      10.0,
+      10.0,
+      254,
+      254,
+      254,
+      254,
+      false,
+      true,
+      4,
+      false,
+      "meow",
+      "meow",
+      false
+    )
+  end
+end)

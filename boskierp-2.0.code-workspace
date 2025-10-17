@@ -1,0 +1,55 @@
+{
+	"folders": [
+        {
+            "name": "dwb-main",
+            "path": "."
+        },
+        {
+            "name": "dwb-ac",
+            "path": "anticheat/"
+        },
+        {
+            "name": "dwb-core",
+            "path": "fivem/resources/[scripts]/[core]"
+        },
+        {
+            "name": "dwb-ui",
+            "path": "fivem/ui"
+        },
+        {
+            "name": "dwb-testing",
+            "path": "testing"
+        },
+        {
+            "name": "dwb-scripts",
+            "path": "scripts"
+        },
+        {
+            "name": "dwb-data",
+            "path": "data"
+        },
+        
+
+
+        {
+            "name": "dwb-discord",
+            "path": "discord/"
+        },
+    ],
+    "settings": {
+        "task.allowAutomaticTasks": "on",
+        "discord.enabled": true,
+        "editor.wordWrap": "on",
+        "Lua.diagnostics.enable": false
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "echo",
+                "type": "shell",
+                "command": "echo Hello"
+            }
+        ]
+    }
+}

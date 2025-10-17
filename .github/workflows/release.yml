@@ -1,0 +1,65 @@
+# # # # # # name: Build & Release (zip)
+
+# # # # # # on:
+# # # # # #   push:
+# # # # # #     tags:
+# # # # # #       - "v*"
+# # # # # #   workflow_dispatch:
+
+# # # # # # permissions:
+# # # # # #   contents: write
+
+# # # # # # jobs:
+# # # # # #   build-release:
+# # # # # #     runs-on: ubuntu-latest
+
+# # # # # #     steps:
+# # # # # #       - name: Checkout
+# # # # # #         uses: actions/checkout@v4
+# # # # # #         with:
+# # # # # #           fetch-depth: 0
+
+# # # # # #       - name: Set up Node
+# # # # # #         uses: actions/setup-node@v4
+# # # # # #         with:
+# # # # # #           node-version: "20"
+# # # # # #           cache: "npm"
+# # # # # #           cache-dependency-path: ui/boskierp/package-lock.json
+
+# # # # # #       - name: Build UI (ui/boskierp)
+# # # # # #         working-directory: ui/boskierp
+# # # # # #         run: |
+# # # # # #           npm ci
+# # # # # #           npm run build
+
+# # # # # #       - name: Make release zip
+# # # # # #         run: |
+# # # # # #           mkdir -p release
+# # # # # #           ZIP_NAME="boskie-${GITHUB_REF_NAME:-manual}.zip"
+# # # # # #           zip -r "release/$ZIP_NAME" . \
+# # # # # #             -x ".git/*" \
+# # # # # #                ".github/*" \
+# # # # # #                "**/node_modules/*" \
+# # # # # #                "**/.next/*" \
+# # # # # #                "**/coverage/*" \
+# # # # # #                "**/cypress/*" \
+# # # # # #                "**/.vscode/*" \
+# # # # # #                "**/.idea/*" \
+# # # # # #                "**/*.log"
+
+# # # # # #       - name: Upload CI artifact (for quick download)
+# # # # # #         uses: actions/upload-artifact@v4
+# # # # # #         with:
+# # # # # #           name: boskie-zip
+# # # # # #           path: release/*.zip
+# # # # # #           if-no-files-found: error
+
+# # # # # #       - name: Create GitHub Release & upload zip
+# # # # # #         uses: softprops/action-gh-release@v2
+# # # # # #         with:
+# # # # # #           tag_name: ${{ github.ref_name }}
+# # # # # #           draft: ${{ github.event_name == 'workflow_dispatch' }}
+# # # # # #           prerelease: false
+# # # # # #           files: release/*.zip
+# # # # # #         env:
+# # # # # #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

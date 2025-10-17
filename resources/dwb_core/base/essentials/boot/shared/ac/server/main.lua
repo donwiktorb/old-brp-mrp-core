@@ -1,0 +1,5 @@
+Event:Register("dwb:ac:data", function(src, xPlayer, data)
+  exports[GetCurrentResourceName()]:ws_send(json.encode(data), function(data)
+    print(data)
+  end)
+end, true)

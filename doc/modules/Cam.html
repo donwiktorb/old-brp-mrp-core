@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_Cam">Class Cam </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/class.html">class</a></li>
+  <li><a href="../modules/Blips.html">Blips</a></li>
+  <li><strong>Cam</strong></li>
+  <li><a href="../modules/Commands.html">Commands</a></li>
+  <li><a href="../modules/Controls.html">Controls</a></li>
+  <li><a href="../modules/Config.html">Config</a></li>
+  <li><a href="../modules/Config.Default.html">Config.Default</a></li>
+  <li><a href="../modules/Config.Zones.html">Config.Zones</a></li>
+  <li><a href="../modules/Config.Default.Zone.html">Config.Default.Zone</a></li>
+  <li><a href="../modules/Config.Zones.boskierp.html">Config.Zones.boskierp</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Animation.html">Animation</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Cam</code></h1>
+<p>Cam Module
+Provides functionality for managing input controls.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Class_Cam">Class Cam </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cam:CinameticVehicle">cam:CinameticVehicle (veh, coords)</a></td>
+	<td class="summary">Start cinematic camera at vehicle</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cam:Create">cam:Create (name, cb, handle, camName, data)</a></td>
+	<td class="summary">Create camera</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cam:CreateEntity">cam:CreateEntity (name, cb, handle, entity, data)</a></td>
+	<td class="summary">Create entity camera</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cam:Destroy">cam:Destroy (name, cb)</a></td>
+	<td class="summary">Destroy camera</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cam:GetAll">cam:GetAll ()</a></td>
+	<td class="summary">Get all cameras</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_Cam"></a>Class Cam </h2>
+
+          <div class="section-description">
+          Controls class for managing input states.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "cam:CinameticVehicle"></a>
+    <strong>cam:CinameticVehicle (veh, coords)</strong>
+    </dt>
+    <dd>
+    Start cinematic camera at vehicle
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">veh</span>
+         integer
+        </li>
+        <li><span class="parameter">coords</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cam:Create"></a>
+    <strong>cam:Create (name, cb, handle, camName, data)</strong>
+    </dt>
+    <dd>
+    Create camera
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">cb</span>
+         function
+        </li>
+        <li><span class="parameter">handle</span>
+         boolean
+        </li>
+        <li><span class="parameter">camName</span>
+         string
+        </li>
+        <li><span class="parameter">data</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cam:CreateEntity"></a>
+    <strong>cam:CreateEntity (name, cb, handle, entity, data)</strong>
+    </dt>
+    <dd>
+    Create entity camera
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">cb</span>
+         function
+        </li>
+        <li><span class="parameter">handle</span>
+         boolean
+        </li>
+        <li><span class="parameter">entity</span>
+         integer
+        </li>
+        <li><span class="parameter">data</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cam:Destroy"></a>
+    <strong>cam:Destroy (name, cb)</strong>
+    </dt>
+    <dd>
+    Destroy camera
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">cb</span>
+         function
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cam:GetAll"></a>
+    <strong>cam:GetAll ()</strong>
+    </dt>
+    <dd>
+    Get all cameras
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2025-01-11 14:41:49 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

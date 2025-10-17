@@ -1,0 +1,1 @@
+Config.Scripts = { LoadScripts = true }

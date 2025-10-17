@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+<li><a href="#Forced_Animation_Methods__Static_methods_for_forced_animations">Forced Animation Methods
+ Static methods for forced animations </a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><strong>Animation</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/class.html">class</a></li>
+  <li><a href="../modules/Blips.html">Blips</a></li>
+  <li><a href="../modules/Cam.html">Cam</a></li>
+  <li><a href="../modules/Commands.html">Commands</a></li>
+  <li><a href="../modules/Controls.html">Controls</a></li>
+  <li><a href="../modules/Config.html">Config</a></li>
+  <li><a href="../modules/Config.Default.html">Config.Default</a></li>
+  <li><a href="../modules/Config.Zones.html">Config.Zones</a></li>
+  <li><a href="../modules/Config.Default.Zone.html">Config.Default.Zone</a></li>
+  <li><a href="../modules/Config.Zones.boskierp.html">Config.Zones.boskierp</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Animation</code></h1>
+<p>Animation Class
+ Handles animations for ped objects in FiveM.</p>
+<p>
+
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Release</strong>: 1.0.0</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: YourName</li>
+    </ul>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#animation:SetCanPlay">animation:SetCanPlay (state)</a></td>
+	<td class="summary">Setter for whether animations can be played</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:PlayAdvanced">animation:PlayAdvanced (ped, lib, anim, coords, rot, entSpeed, exSpeed, duration, flag, time)</a></td>
+	<td class="summary">Play advanced animation</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:Play">animation:Play (ped, lib, anim, blendIn, blendOut, duration, flag, playRate, lockX, lockY, lockZ)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:PlayClipset">animation:PlayClipset (ped, anim, speed)</a></td>
+	<td class="summary">Play anim clipset</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:PlayClipsetWeapon">animation:PlayClipsetWeapon (ped, anim, speed)</a></td>
+	<td class="summary">Play weapon clipset</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:ClearTasks">animation:ClearTasks (ped)</a></td>
+	<td class="summary">Clear Tasks</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animation:ResetMovement">animation:ResetMovement (ped)</a></td>
+	<td class="summary">Reset Movement</td>
+	</tr>
+</table>
+<h2><a href="#Forced_Animation_Methods__Static_methods_for_forced_animations">Forced Animation Methods
+ Static methods for forced animations </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Animation.forced:PlayAdvanced">Animation.forced:PlayAdvanced (ped, lib, anim, coords, rot, entSpeed, exSpeed, duration, flag, time)</a></td>
+	<td class="summary">func desc</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Animation.forced:Play">Animation.forced:Play (ped, lib, anim, blendIn, blendOut, duration, flag, playRate, lockX, lockY, lockZ)</a></td>
+	<td class="summary">Play (forced)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Animation.forced:PlayClipset">Animation.forced:PlayClipset (ped, anim, speed)</a></td>
+	<td class="summary">Play clipset (forced)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Animation.forced:ClearTasks">Animation.forced:ClearTasks (ped)</a></td>
+	<td class="summary">ClearTasks (forced)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Animation.forced:ResetMovement">Animation.forced:ResetMovement (ped)</a></td>
+	<td class="summary">Reset Movement</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "animation:SetCanPlay"></a>
+    <strong>animation:SetCanPlay (state)</strong>
+    </dt>
+    <dd>
+    Setter for whether animations can be played
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">state</span>
+         boolean
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:PlayAdvanced"></a>
+    <strong>animation:PlayAdvanced (ped, lib, anim, coords, rot, entSpeed, exSpeed, duration, flag, time)</strong>
+    </dt>
+    <dd>
+    Play advanced animation
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">lib</span>
+         string
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">coords</span>
+         table
+        </li>
+        <li><span class="parameter">rot</span>
+         table
+        </li>
+        <li><span class="parameter">entSpeed</span>
+         number
+        </li>
+        <li><span class="parameter">exSpeed</span>
+         number
+        </li>
+        <li><span class="parameter">duration</span>
+         integer
+        </li>
+        <li><span class="parameter">flag</span>
+         bitlib
+        </li>
+        <li><span class="parameter">time</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:Play"></a>
+    <strong>animation:Play (ped, lib, anim, blendIn, blendOut, duration, flag, playRate, lockX, lockY, lockZ)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">lib</span>
+         string
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">blendIn</span>
+         number
+        </li>
+        <li><span class="parameter">blendOut</span>
+         number
+        </li>
+        <li><span class="parameter">duration</span>
+         number
+        </li>
+        <li><span class="parameter">flag</span>
+         bitlib
+        </li>
+        <li><span class="parameter">playRate</span>
+         number
+        </li>
+        <li><span class="parameter">lockX</span>
+         boolean
+        </li>
+        <li><span class="parameter">lockY</span>
+         boolean
+        </li>
+        <li><span class="parameter">lockZ</span>
+         boolean
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:PlayClipset"></a>
+    <strong>animation:PlayClipset (ped, anim, speed)</strong>
+    </dt>
+    <dd>
+    Play anim clipset
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">speed</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:PlayClipsetWeapon"></a>
+    <strong>animation:PlayClipsetWeapon (ped, anim, speed)</strong>
+    </dt>
+    <dd>
+    Play weapon clipset
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">speed</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:ClearTasks"></a>
+    <strong>animation:ClearTasks (ped)</strong>
+    </dt>
+    <dd>
+    Clear Tasks
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animation:ResetMovement"></a>
+    <strong>animation:ResetMovement (ped)</strong>
+    </dt>
+    <dd>
+    Reset Movement
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Forced_Animation_Methods__Static_methods_for_forced_animations"></a>Forced Animation Methods
+ Static methods for forced animations </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Animation.forced:PlayAdvanced"></a>
+    <strong>Animation.forced:PlayAdvanced (ped, lib, anim, coords, rot, entSpeed, exSpeed, duration, flag, time)</strong>
+    </dt>
+    <dd>
+    func desc
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">lib</span>
+         string
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">coords</span>
+         table
+        </li>
+        <li><span class="parameter">rot</span>
+         table
+        </li>
+        <li><span class="parameter">entSpeed</span>
+         integer
+        </li>
+        <li><span class="parameter">exSpeed</span>
+         integer
+        </li>
+        <li><span class="parameter">duration</span>
+         integer
+        </li>
+        <li><span class="parameter">flag</span>
+         bitlib
+        </li>
+        <li><span class="parameter">time</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Animation.forced:Play"></a>
+    <strong>Animation.forced:Play (ped, lib, anim, blendIn, blendOut, duration, flag, playRate, lockX, lockY, lockZ)</strong>
+    </dt>
+    <dd>
+    Play (forced)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">lib</span>
+         string
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">blendIn</span>
+         number
+        </li>
+        <li><span class="parameter">blendOut</span>
+         number
+        </li>
+        <li><span class="parameter">duration</span>
+         integer
+        </li>
+        <li><span class="parameter">flag</span>
+         bitlib
+        </li>
+        <li><span class="parameter">playRate</span>
+         number
+        </li>
+        <li><span class="parameter">lockX</span>
+         boolean
+        </li>
+        <li><span class="parameter">lockY</span>
+         boolean
+        </li>
+        <li><span class="parameter">lockZ</span>
+         boolean
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Animation.forced:PlayClipset"></a>
+    <strong>Animation.forced:PlayClipset (ped, anim, speed)</strong>
+    </dt>
+    <dd>
+    Play clipset (forced)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+        <li><span class="parameter">anim</span>
+         string
+        </li>
+        <li><span class="parameter">speed</span>
+         number
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Animation.forced:ClearTasks"></a>
+    <strong>Animation.forced:ClearTasks (ped)</strong>
+    </dt>
+    <dd>
+    ClearTasks (forced)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Animation.forced:ResetMovement"></a>
+    <strong>Animation.forced:ResetMovement (ped)</strong>
+    </dt>
+    <dd>
+    Reset Movement
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ped</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2025-01-11 14:41:49 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

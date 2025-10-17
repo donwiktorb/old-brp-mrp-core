@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dev-solo",
+            "type": "shell",
+            "command": "artifacts\\FXServer.exe +exec data/dwb.cfg +set onesync on +svgui",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "ui",
+            "problemMatcher": [],
+            "label": "npm: start - ui",
+            "detail": "react-scripts start"
+        },
+        {
+            "type": "npm",
+            "script": "run",
+            "path": "ui",
+            "problemMatcher": [],
+            "label": "npm: run build - ui",
+            "detail": "react-scripts build"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+Config.Settings = {}
+Config.Settings.Default = {
+	["outlines"] = true,
+	["speedometer-on"] = true,
+	["compass"] = true,
+	["hud-on"] = true,
+	["compass-update"] = 300,
+	["hud-update"] = 99,
+	["speed-scale"] = 100,
+	["speed-update"] = 100,
+	["volume"] = 1.0,
+	["car-radio-volume"] = 70.0,
+	["radio-volume"] = 1.0,
+	["speedometer"] = 0,
+	["inventory"] = 1,
+	["phone"] = 1,
+	["speedometer-main"] = 0,
+	["hud-main"] = 0,
+}

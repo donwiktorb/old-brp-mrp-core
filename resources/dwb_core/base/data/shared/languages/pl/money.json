@@ -1,0 +1,10 @@
+{
+    "bank": "bank",
+    "in_vehicle": "nie możesz przekazywać przedmiotów w pojeździe",
+    "received_paycheck": "otrzymana wypłata",
+    "received_help": "otrzymałem zapomogę: ~g~$%s~s~",
+    "company_nomoney": "firma, w której pracujesz, jest zbyt biedna, by wypłacić twoją pensję",
+    "act_imp": "działanie niemożliwe",
+    "received_salary": "otrzymałeś wynagrodzenie: ~g~%s$~s~",
+    "black_money": "brudne pieniądze"
+}

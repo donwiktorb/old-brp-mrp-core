@@ -1,0 +1,10 @@
+{
+  "hunter_license": "Licencja myśliwego",
+  "bought": "Zakupione!",
+  "bank_remove": "%s zabrał ci z konta za %s w ilości %s$",
+  "bank_add": "Otrzymano przez %s za %s %s$",
+  "bank": "bank",
+  "property": "Mieszkania",
+  "request_deny": "Odrzucono",
+  "not_enough_money": "Nie masz %s"
+}

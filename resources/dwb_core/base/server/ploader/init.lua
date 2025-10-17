@@ -1,0 +1,223 @@
+
+-- local dir = './resources/[scripts]/[core]/dwb/base/essentials/boot/scripts/'
+-- local scripts = {}
+-- local threads = {}
+-- local currentResource = "none"
+-- local makeThread = Thread:Create
+
+-- function startThread(f, ...)
+--     local th = coroutine.create(f)
+--     table.insert(threads, {
+--         th = th,
+--         name = currentResource,
+--         stopped = false
+--     })
+--     return coroutine.resume(th, ...)
+-- end
+
+-- Thread:Create = startThread
+
+-- function setHook(f, key, quota)
+--     if type(debug) ~= 'table' or type(debug.sethook) ~= 'function' then return end
+--     debug.sethook(f, key, quota)
+-- end
+
+-- function runSandbox(name, code)
+--     local _env = _ENV
+--     currentResource = name
+--     local f = assert(load(code, nil, 't', _env))
+--     local t = table.pack(pcall, f)
+--     -- setHook()
+--     if not t[1] then error(t[2]) end
+--     return table.unpack(t, 2, t.n)()
+-- end
+
+-- function findString(str, search)
+--     return string.find(str, search) ~= nil
+-- end
+
+-- function scandir(directory, onlyDirs)
+--     local i, t, popen = 0, {}, io.popen
+--     local pfile = popen('dir "'..directory..'" /B')
+--     local counter = 0
+--     for filename in pfile:lines() do
+--         -- local fixedName = string.sub(filename, 37)
+--         -- local fType = findString(filename, 'DIR') and 'dir' or 'file'
+--         -- if (
+--         --     (string.find(fixedName, '..', 1, true) == nil)
+--         --     and (string.find(fixedName, '.', 1, true) == nil
+--         --     or string.len(fixedName) > 1))
+--         --     and (not onlyDirs or findString(filename, 'DIR'))
+--         --     and fixedName ~= '' and not findString(fixedName, 'bytes')
+--         --     and not findString(filename, 'Directory') then
+--         --     counter = counter + 1
+--         --     if counter >= 2 then
+--         --         i = i+1
+--         --         t[i] = {
+--         --             name = fixedName,
+--         --             ftype = fType
+--         --         }
+--         --     end
+--         -- end
+--         local fType = string.find(filename, ".", 1, true) ~= nil and 'file' or 'dir'
+--         i = i+1
+--         t[i] = {
+--             name = filename,
+--             ftype = fType,
+--             fDir = directory..'/'..filename
+--         }
+--     end
+--     pfile:close()
+--     return t
+-- end
+
+-- function loadSubFolders(dir)
+--     local tempCache = {}
+--     local files = scandir(dir, false)
+
+--     local filePath = '/base/essentials/boot/'..folderName..'/'..folderName2..'/'..name
+--     if folderName2 == 'server' then
+--         local code = LoadResourceFile('dwb', '/base/essentials/boot/'..folderName..'/'..folderName2..'/'..name, true)
+--         runSandbox(folderName, code)
+--     elseif folderName2 == 'shared' then
+--         local code = LoadResourceFile('dwb', '/base/essentials/boot/'..folderName..'/'..folderName2..'/'..name, true)
+--         runSandbox(folderName, code)
+--         table.insert(tempCache, {
+--             code = code,
+--             path = filePath,
+--             sName = folderName
+--         })
+--     elseif folderName2 == 'client' then
+--         local code = LoadResourceFile('dwb', '/base/essentials/boot/'..folderName..'/'..folderName2..'/'..name, true)
+--         table.insert(tempCache, {
+--             code = code,
+--             path = filePath,
+--             sName = folderName
+--         })
+--     end
+--     return tempCache
+-- end
+
+-- function loadResources(data, onlyServer)
+--     if data then
+--         for n,m in pairs(cachedCodes) do
+--             for k,v in pairs(data) do
+--                 if m.sName == v then
+--                     cachedCodes[n] = nil
+--                 end
+--             end
+--         end
+--     else
+--         cachedCodes = {}
+--     end
+--     local dirs = scandir(dir, true)
+
+--     for k,v in pairs(dirs) do
+--         local folderName = v.name:gsub("%s+", "")
+--         local search = false
+--         if data then
+--             for n,m in pairs(data) do
+--                 if m == folderName then
+--                     search = true
+--                 end
+--             end
+--         end
+--         if (not data) or (data and search) then
+--             local newDirs = scandir(dir..'/'..folderName, false)
+--             for n,m in pairs(newDirs) do
+--                 local folderName2 = m.name:gsub("%s+", "")
+--                 local cDir = dir..'/'..folderName..'/'..folderName2
+--                 local r = true
+--                 while r do
+--                     local hasDirs = false
+--                     local files = scandir(cDir, false)
+--                     for b,d in pairs(files) do
+--                         -- local lines = {}
+--                         -- for token in string.gmatch(d.name, "[^%s]+") do
+--                         --     table.insert(lines, token)
+--                         -- end
+--                         -- local name = lines[2]
+--                         local name = d.name
+--                         -- local fullDir = cDir..'/'..name
+--                         local fullDir = d.fDir
+--                         if d.ftype == 'file' then
+--                             -- local filePath = '/base/essentials/boot/'..folderName..'/'..folderName2..'/'..name
+--                             local filePath = '/base/essentials/boot/scripts/'..fullDir:sub(#dir+2)
+--                             if folderName2 == 'server' and onlyServer then
+--                                 local code = LoadResourceFile('dwb', filePath, true)
+--                                 runSandbox(folderName, code)
+--                             elseif folderName2 == 'shared' then
+--                                 local code = LoadResourceFile('dwb', filePath, true)
+--                                 runSandbox(folderName, code)
+--                                 table.insert(cachedCodes, {
+--                                     code = code,
+--                                     path = filePath,
+--                                     sName = folderName
+--                                 })
+--                             elseif folderName2 == 'client' and not onlyServer then
+--                                 local code = LoadResourceFile('dwb', filePath, true)
+--                                 table.insert(cachedCodes, {
+--                                     code = code,
+--                                     path = filePath,
+--                                     sName = folderName
+--                                 })
+--                             end
+--                         else
+--                             hasDirs = true
+--                             cDir = fullDir
+--                         end
+--                     end
+--                     r = hasDirs
+--                 end
+--             end
+--         end
+--     end
+--     return cachedCodes
+-- end
+
+-- makeThread(function()
+-- Wait(2000)
+-- loadResources(nil, true)
+-- end)
+
+-- RegisterNetEvent('dwb:scripts:request')
+-- AddEventHandler('dwb:scripts:request', function()
+--     local cache = loadResources()
+--     TriggerClientEvent('dwb:scripts:receive', source, cache)
+-- end)
+
+-- RegisterCommand('sstop', function(s, a, r)
+--     for k,v in pairs(threads) do
+--         if v.name == a[2] then
+--             v.stopped = true
+--             print('Resource', v.name, 'has been stopped')
+--         end
+--     end
+--     local all = a[1] == 'all' and -1 or s
+--     TriggerClientEvent('dwb:scripts:stop', all, a[2])
+-- end)
+
+-- RegisterCommand('reset', function(s, a, r)
+--     local allPlayers = a[1] == 'all' and -1 or s
+--     local all = a[2] == 'all'
+--     if all then
+--         table.remove(a, 1)
+--         table.remove(a, 1)
+--         for k,v in pairs(threads) do
+--             v.stopped = true
+--         end
+--         local cache = loadResources()
+--         TriggerClientEvent('dwb:scripts:reset:all', allPlayers, cache)
+--     else
+--         table.remove(a, 1)
+--         for k,v in pairs(threads) do
+--             for n,m in pairs(a) do
+--                 if v.name == m then
+--                     v.stopped = true
+--                 end
+--             end
+--         end
+--         local cache = loadResources(a)
+--         TriggerClientEvent('dwb:scripts:reset', allPlayers, a, cache)
+--     end
+-- end)

@@ -1,0 +1,35 @@
+{
+    "artificialDelayMilliseconds": 700,
+    "keepExistingTerminalsOpen": false,
+    "runOnStartup": false,
+    "terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "server",
+                    "commands": ["artifacts\\FXServer.exe +exec data/dwb.cfg +set onesync legacy"],
+                    "shouldRunCommands": false
+                },
+                {
+                    "name": "ui build",
+                    "commands": ["cd ui"],
+                    "shouldRunCommands": true
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "ui",
+                    "commands": ["cd ui"],
+                    "shouldRunCommands": true
+                },
+                {
+                    "name": "git",
+                    "commands": ["git branch"],
+                    "shouldRunCommands": true
+                }
+            ]
+        }
+    ]
+}

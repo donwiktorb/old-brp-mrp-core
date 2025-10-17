@@ -1,0 +1,28 @@
+
+--[[
+  On load choose char
+--]]
+-------
+----User:RunCharSelect({
+----  type = DWB.PlayerData.mode,
+----  serverSave = true,
+----  charDataExtras = {
+----    {
+----      type = "select",
+----      name = "team",
+----      options = {
+----        {
+----          label = "USA",
+----          value = "USA",
+----        },
+----        {
+----          label = "RU",
+----          value = "RU",
+----        },
+----      },
+----    },
+----  },
+----}, function(data, menu, charData)
+----  menu.close()
+----  User:Teleport(Config.Modes[DWB.PlayerData.mode][charData.team].spawn)
+----end)

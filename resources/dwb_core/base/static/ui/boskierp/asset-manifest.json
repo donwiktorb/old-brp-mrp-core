@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/base/static/ui/boskierp/static/css/main.ebd6c8f3.css",
+    "main.js": "/base/static/ui/boskierp/static/js/main.b38e609b.js",
+    "static/js/488.195e4374.chunk.js": "/base/static/ui/boskierp/static/js/488.195e4374.chunk.js",
+    "static/media/bgphone4.png": "/base/static/ui/boskierp/static/media/bgphone4.e33e939e7d5fa86e3587.png",
+    "index.html": "/base/static/ui/boskierp/index.html",
+    "main.ebd6c8f3.css.map": "/base/static/ui/boskierp/static/css/main.ebd6c8f3.css.map",
+    "main.b38e609b.js.map": "/base/static/ui/boskierp/static/js/main.b38e609b.js.map",
+    "488.195e4374.chunk.js.map": "/base/static/ui/boskierp/static/js/488.195e4374.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebd6c8f3.css",
+    "static/js/main.b38e609b.js"
+  ]
+}

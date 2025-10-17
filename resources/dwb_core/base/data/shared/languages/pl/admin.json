@@ -1,0 +1,6 @@
+{
+    "ban": "\n\nDiscord: https://discord.gg/boskierp\n\nZostałeś zbanowany za %s przez %s, czas bana: %s od %s BANID: %s",
+    "kick": "Zostałeś wyrzucony przez %s za %s",
+    "no_permissions": "Nie posiadasz permisji",
+    "no_permissions_command": "Nie posiadasz permisji do tej komendy: %s"
+}

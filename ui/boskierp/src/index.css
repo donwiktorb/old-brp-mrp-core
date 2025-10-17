@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Smythe&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
+@font-face {
+  font-family: "Digital2";
+  src: url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.eot");
+  src:
+    url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/2d6cb0ab2a3bb39c8b6746a6aab1db0c.svg#Digital2")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Signme";
+  src: url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.eot");
+  src:
+    url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/4c479e28ffcf6ff98f8b43d3f427aeb6.svg#Sign me!")
+      format("svg");
+}
+
+example-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.example-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 300ms,
+    transform 300ms;
+}
+.example-exit {
+  opacity: 1;
+}
+.example-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 300ms,
+    transform 300ms;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+.notify-enter {
+  transform: translateX(-150%);
+}
+.notify-enter-active {
+  transform: translateX(-150%);
+  transition: transform 500ms ease-in;
+}
+.notify-exit {
+  transform: translateX(0);
+}
+.notify-exit-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-in;
+}
+
+loading-enter {
+  opacity: 0;
+}
+
+.loading-enter-active {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+.loading-exit {
+  opacity: 1;
+}
+.loading-exit-active {
+  opacity: 0;
+  transition: opacity 800ms;
+}
+/* 
+.customSelector {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+} */
+
+/* Input Thumb */
+.customSelector::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: lime;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.customSelector::-moz-range-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: lime;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.customSelector::-ms-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: lime;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Input Track */
+.customSelector::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.customSelector::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.customSelector::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.glass {
+  @apply bg-white bg-opacity-10 backdrop-blur-md border border-gray-200;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_Blips">Class Blips </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/class.html">class</a></li>
+  <li><strong>Blips</strong></li>
+  <li><a href="../modules/Cam.html">Cam</a></li>
+  <li><a href="../modules/Commands.html">Commands</a></li>
+  <li><a href="../modules/Controls.html">Controls</a></li>
+  <li><a href="../modules/Config.html">Config</a></li>
+  <li><a href="../modules/Config.Default.html">Config.Default</a></li>
+  <li><a href="../modules/Config.Zones.html">Config.Zones</a></li>
+  <li><a href="../modules/Config.Default.Zone.html">Config.Default.Zone</a></li>
+  <li><a href="../modules/Config.Zones.boskierp.html">Config.Zones.boskierp</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Animation.html">Animation</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Blips</code></h1>
+<p>Blips Module
+Provides functionality for managing input controls.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Class_Blips">Class Blips </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#blips:SetData">blips:SetData (blip, data)</a></td>
+	<td class="summary">Set Data for blip</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips:CreateEntity">blips:CreateEntity (name, entity)</a></td>
+	<td class="summary">Create Entity blip</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips.label">blips.label</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips.blip">blips.blip</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips:Create">blips:Create (name, coords, data)</a></td>
+	<td class="summary">Create blip</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips:RemoveAll">blips:RemoveAll ()</a></td>
+	<td class="summary">Remove all blips</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blips:Remove">blips:Remove (name)</a></td>
+	<td class="summary">Remove specified blip</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_Blips"></a>Class Blips </h2>
+
+          <div class="section-description">
+          Controls class for managing input states.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "blips:SetData"></a>
+    <strong>blips:SetData (blip, data)</strong>
+    </dt>
+    <dd>
+    Set Data for blip
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">blip</span>
+         string
+        </li>
+        <li><span class="parameter">data</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips:CreateEntity"></a>
+    <strong>blips:CreateEntity (name, entity)</strong>
+    </dt>
+    <dd>
+    Create Entity blip
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">entity</span>
+         integer
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips.label"></a>
+    <strong>blips.label</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">label</span>
+         string
+        </li>
+        <li><span class="parameter">sprite</span>
+         integer
+        </li>
+        <li><span class="parameter">display</span>
+         integer
+        </li>
+        <li><span class="parameter">color</span>
+         integer
+        </li>
+        <li><span class="parameter">scale</span>
+         integer
+        </li>
+        <li><span class="parameter">shortRange</span>
+         boolean
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips.blip"></a>
+    <strong>blips.blip</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">blip</span>
+         BlipStruct
+        </li>
+        <li><span class="parameter">coords</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips:Create"></a>
+    <strong>blips:Create (name, coords, data)</strong>
+    </dt>
+    <dd>
+    Create blip
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+        <li><span class="parameter">coords</span>
+         table
+        </li>
+        <li><span class="parameter">data</span>
+         table
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips:RemoveAll"></a>
+    <strong>blips:RemoveAll ()</strong>
+    </dt>
+    <dd>
+    Remove all blips
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blips:Remove"></a>
+    <strong>blips:Remove (name)</strong>
+    </dt>
+    <dd>
+    Remove specified blip
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+         string
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/lunarmodules/LDoc">LDoc 1.5.0</a></i>
+<i style="float:right;">Last updated 2025-01-11 14:41:49 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

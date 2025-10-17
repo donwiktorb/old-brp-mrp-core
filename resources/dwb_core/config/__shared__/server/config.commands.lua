@@ -1,0 +1,3 @@
+Config.Commands = {
+	DontCheckGroup = false,
+}

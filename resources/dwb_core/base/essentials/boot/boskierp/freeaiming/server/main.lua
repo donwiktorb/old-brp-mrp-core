@@ -1,0 +1,3 @@
+-- -- Event:Register('dwb:aiming:started', function(source, xPlayer,action, netId, entData)
+-- --     print(json.encode(action), json.encode(netId), json.encode(entData))
+-- -- end, true)

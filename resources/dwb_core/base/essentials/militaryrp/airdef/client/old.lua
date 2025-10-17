@@ -1,0 +1,64 @@
+-- local prop = 'hei_prop_carrier_defense_02'
+-- local propCoords = vector3(-5185.43945, 32.3815842, 15.0550652)
+-- local weaponHash = GetHashKey('VEHICLE_WEAPON_PLAYER_LAZER')
+-- local isActive = false
+-- local fixed, vehCoords
+
+-- Citizen.CreateThread(function()
+--     while true do
+--         if isActive then
+--             ShootSingleBulletBetweenCoords(fixed, vehCoords, 4, false, weaponHash, false, true, false, 0.0)
+--         end
+--     end
+-- end)
+
+-- Event:Register('dwb:air:sync:start', function(fixed, vehCoords, weaponHash)
+--     Stream:RequestWeapon(weaponHash)
+--     isActive = true
+--     fixed = fixed
+--     vehCoords = vehCoords
+--     weaponHash = weaponHash
+-- end, true)
+
+-- Citizen.CreateThread(function()
+--     print(propCoords)
+--     Marker:Add('defair', {
+--         -- marker = {},
+--         settings = {
+--             -- drawMarker = true,
+--             drawDist = 1000.0,
+--             radius = 50.0,
+--             overrideCords = true,
+--             closeDistWait = 200
+--         },
+--         coords = {
+--             {
+--                 prop = prop,
+--                 pos = vector3(-5185.43945, 32.3815842, 15.0550652)
+--             }
+--         },
+--         functions = {
+--             onCloseDist = function(zone, zPos)
+--                 local ped = PlayerPedId()
+--                 local veh = GetVehiclePedIsIn(ped)
+--                 if veh ~= 0 and IsEntityInAir(veh) then
+--                     local coords = zPos.pos
+--                     local prop = GetHashKey(zPos.prop)
+--                     local obj = GetClosestObjectOfType(coords, 20.0, prop, false, true, true)
+--                     if obj ~= 0 then
+--                         local topOffset = vector3(0,0,8)
+--                         local fixed = coords+topOffset
+--                         Stream:RequestWeapon(weaponHash)
+--                         local vehCoords = GetEntityCoords(veh)
+--                         ShootSingleBulletBetweenCoords(fixed, vehCoords, 4, false, weaponHash, false, true, false, 0.0)
+--                     else
+--                         print(obj)
+--                     end
+--                 end
+--             end,
+--             onDrawDistExit = function()
+--                 print('exit')
+--             end
+--         }
+--     })
+-- end)

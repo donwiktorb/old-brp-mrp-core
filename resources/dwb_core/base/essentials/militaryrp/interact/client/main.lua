@@ -1,0 +1,44 @@
+-- Citizen.CreateThread(function()
+--     local messages = {
+--         onEnter = 'Ped',
+--         onClose = 'Ped4',
+--         onExit = 'Ped2'
+--     }
+
+--     for k,v in pairs(Config.CarStealer.spawnCarCoords) do
+--         Marker:Add('carstealer', {
+--             marker = {} ,
+--             messages = messages,
+--             settings = {
+--                 drawMarker = false,
+--                 drawDist = 20,
+--                 radius = 2.0
+--             },
+--             coords = {
+--                 {
+--                     pos = v.pos
+--                 }
+--             },
+--             functions = {
+--                 onDrawDistEnter = function(zone)
+--                     Ped:Create('carstealer', {
+--                         ped = {
+--                             pedType = 2,
+--                             modelHash = Config.CarStealer.defaultPed,
+--                             coords = v.pos,
+--                             heading = v.heading,
+--                             isNetwork = false,
+--                             bScriptHostPed = false
+--                         }
+--                     }, function(ped)
+--                         FreezeEntityPosition(ped, true)
+--                     end)
+--                 end,
+--                 onDrawDistExit = function(zone)
+--                     Ped:RemoveAll('carstealer')
+--                 end
+--             }
+--         })
+--     end
+-- end)
+

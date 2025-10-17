@@ -1,0 +1,2 @@
+
+[dwb] -> (Server:ERROR) -> [@@dwb_core/base/server/player/classes/_user.lua:174] -> Erorr Joined "[string \"/boskierp/license/server/extend.lua\"]:2: attempt to index a nil value (field 'char')"

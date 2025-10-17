@@ -1,0 +1,147 @@
+-- local ownedZones = {}
+
+-- Citizen.CreateThread(function()
+--     while true do
+--         Wait(10000)
+--         for k,v in pairs(ownedZones) do
+--             local xPlayer = DWB.Players[k]
+--             if xPlayer then
+--                 local ped = GetPlayerPed(k)
+--                 if IsEntityDead(ped) then
+--                     Event:TriggerNet('dwb:zones:stop', -1, ownedZones[k])
+--                     ownedZones[k] = nil
+--                 end
+--             else
+--                 Event:TriggerNet('dwb:zones:stop', -1, ownedZones[k])
+--                 ownedZones[k] = nil
+--             end
+--         end
+--     end
+-- end)
+
+-- -- local current = {}
+
+-- -- local myzones = {
+-- -- }
+-- --     --[[
+-- --         [source] = {
+-- --             zone = name,
+-- --             team = team
+-- --         }
+-- --     ]]
+
+-- -- function countTeams(zone)
+-- --     local teams = {
+-- --         ["RU"] = 0,
+-- --         ["USA"] = 0
+-- --     }
+-- --     for k,v in pairs(myzones) do
+-- --         if zone == v.zone then
+-- --             teams[v.team] = teams[v.team] + 1
+-- --         end
+-- --     end
+-- --     return teams
+-- -- end
+
+-- Event:Register('dwb:player:dropped', function(source, xPlayer, reason)
+--     zones[source] = nil
+-- end)
+
+-- Command:Register('zone', {"Enable zone"}, function(xPlayer, a)
+--     for k,v in pairs(myzones) do
+--         if v.zone == a[1] then
+--             myzones[k] = nil
+--         end
+--     end
+--     for k,v in pairs(Zones.Zones) do
+--         if v.name == a[1] then
+--             v.disable=not v.disable
+--         end
+--     end
+--     Event:TriggerNet('dwb:zones:state', -1, a[1])
+-- end, {'superadmin', 'admin'})
+
+-- Event:Register('dwb:zones:enter', function(zone, team)
+--     -- if not current[zone] then
+--     --     current[zone] = {
+--     --         source = source,
+--     --         team = team
+--     --     }
+--     -- end
+
+--     -- myzones[source] = {
+--     --     zone = zone,
+--     --     team = team
+--     -- }
+--     -- local teams = countTeams(zone)
+--     -- if team == 'USA' then
+--     --     if teams[team] > teams['RU'] then
+--     --         local message = "USA PRZEJMUJE STREFĘ "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     elseif teams[team] == teams['RU'] then
+--     --         local message = "NIKT NIE PRZEJMUJE STREFY "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     elseif not (teams[team] < teams['RU']) then
+--     --         local message = "NIKT NIE PRZEJMUJE STREFY "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     end
+--     -- else
+--     --     if teams[team] > teams['USA'] then
+--     --         local message = "ROSJA PRZEJMUJE STREFĘ "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     elseif teams[team] == teams['USA'] then
+--     --         local message = "NIKT NIE PRZEJMUJE STREFY "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     end
+--     -- end
+-- end, true)
+
+-- Event:Register('dwb:zones:exit', function(zone, team)
+--     -- print(source,zone,team)
+--     -- myzones[source] = nil
+--     -- local teams = countTeams(zone)
+--     -- if team == 'USA' then
+--     --     if teams[team] > teams['RU'] then
+--     --         local message = "USA PRZEJMUJE STREFĘ "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     elseif teams[team] == teams['RU'] then
+--     --         local message = "NIKT NIE PRZEJMUJE STREFY "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     end
+--     -- else
+--     --     if teams[team] > teams['USA'] then
+--     --         local message = "ROSJA PRZEJMUJE STREFĘ "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     elseif teams[team] == teams['USA'] then
+--     --         local message = "NIKT NIE PRZEJMUJE STREFY "..zone
+--     --         Event:TriggerNet('dwb:chat:addMessage', -1, {
+--     --             template = '<div style="padding: 0.3vw;  margin: 0.3vw; background-color: rgba(252, 227, 3, 0.6); color:red; border-radius: 3px;"><i class="fas fa-angle-double-right"style="font-size:13px;color:rgb(38,38,38,0.5)"></i>&ensp;<font color="red">[Strefy]  <font color="black"> {0}</font></font>&ensp;</div>',
+--     --             args = { message}
+--     --         })
+--     --     end
+--     -- end
+-- end, true)
