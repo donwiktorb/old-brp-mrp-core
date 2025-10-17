@@ -1,5 +1,5 @@
-# boskierp-2.0
-brp
+# Core for our fivem servers
 
-### BoskieRP 2.0
-[TODO](https://github.com/donwiktorb/boskierp-2.0/blob/main/TODO.md)"# boskie-network" 
+
+
+Core is inside resources/**/dwb_core
